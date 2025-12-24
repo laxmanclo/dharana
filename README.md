@@ -2,7 +2,7 @@
 
 A Chrome extension that forces intentionality on distracting websites.
 
-*Dharana (धारणा) - Sanskrit for concentration, the sixth limb of yoga.*
+
 
 ## How it works
 
