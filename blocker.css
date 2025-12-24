@@ -1,0 +1,170 @@
+/* Focus Guard - Blocker Overlay Styles */
+
+#focus-guard-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  animation: fadeIn 0.25s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+#focus-guard-modal {
+  background: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 40px 48px;
+  max-width: 440px;
+  width: 90%;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+}
+
+#focus-guard-site-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #2a2a2a;
+  color: #888;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+#focus-guard-site-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #e5484d;
+  border-radius: 50%;
+}
+
+#focus-guard-title {
+  color: #f0f0f0;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.3px;
+}
+
+#focus-guard-subtitle {
+  color: #666;
+  font-size: 15px;
+  margin: 0 0 32px 0;
+  line-height: 1.5;
+}
+
+#focus-guard-input {
+  width: 100%;
+  background: #161616;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 15px;
+  color: #f0f0f0;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+#focus-guard-input::placeholder {
+  color: #555;
+}
+
+#focus-guard-input:focus {
+  border-color: #444;
+}
+
+#focus-guard-submit {
+  width: 100%;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#focus-guard-submit:hover {
+  background: #fff;
+}
+
+#focus-guard-submit:active {
+  transform: scale(0.98);
+}
+
+#focus-guard-submit:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+#focus-guard-timer {
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#focus-guard-purpose-display {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  color: #888;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#focus-guard-purpose-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+/* Expired/Dead state - tab is done */
+#focus-guard-overlay.expired {
+  background: #0a0a0a;
+}
+
+#focus-guard-overlay.expired #focus-guard-modal {
+  text-align: center;
+}
+
+#focus-guard-dead-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+#focus-guard-dead-message {
+  color: #666;
+  font-size: 14px;
+  margin-top: 16px;
+  line-height: 1.6;
+}

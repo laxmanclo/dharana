@@ -1,0 +1,37 @@
+{
+    "manifest_version": 3,
+    "name": "Dharana",
+    "version": "1.0.0",
+    "description": "Forces intentionality on distracting sites. State your purpose, get 5 minutes, then the tab dies.",
+    "permissions": [],
+    "host_permissions": [
+        "*://*.reddit.com/*",
+        "*://*.x.com/*",
+        "*://*.twitter.com/*",
+        "*://*.youtube.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.reddit.com/*",
+                "*://*.x.com/*",
+                "*://*.twitter.com/*",
+                "*://*.youtube.com/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "blocker.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "icons": {
+        "48": "icon.png",
+        "128": "icon.png"
+    }
+}
